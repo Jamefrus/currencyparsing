@@ -1,7 +1,6 @@
 package com.epam.tasks.parser;
 
 import com.epam.tasks.domain.Currency;
-import com.epam.tasks.domain.ExchangeData;
 import com.google.common.collect.ImmutableMap;
 
 import javax.xml.bind.JAXBContext;
@@ -15,7 +14,8 @@ import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class NBUXmlExchangeDataParser implements ExchangeParser {
+@SuppressWarnings({"unused", "MismatchedQueryAndUpdateOfCollection"})
+class NBUXmlExchangeDataParser implements ExchangeParser {
 
     public static final String NBU_PROVIDER = "NBU";
     private Unmarshaller unmarshaller;
@@ -24,10 +24,8 @@ public class NBUXmlExchangeDataParser implements ExchangeParser {
         unmarshaller = JAXBContext.newInstance(XmlExchange.class).createUnmarshaller();
     }
 
-    @Override
-    public ExchangeData parse(URL url) throws Exception {
-        Map<String, Currency> currencies = groupByContractions((XmlExchange) unmarshaller.unmarshal(url));
-        return new ExchangeData(currencies);
+    public Map<String, Currency> parseCurrencies(URL url) throws JAXBException {
+        return groupByContractions((XmlExchange) unmarshaller.unmarshal(url));
     }
 
     private Map<String, Currency> groupByContractions(XmlExchange xmlExchange) {

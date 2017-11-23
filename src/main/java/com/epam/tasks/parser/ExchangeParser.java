@@ -1,9 +1,10 @@
 package com.epam.tasks.parser;
 
-import com.epam.tasks.domain.ExchangeData;
+import com.epam.tasks.domain.Currency;
 
 import java.net.URL;
+import java.util.Map;
 
 public interface ExchangeParser {
-    ExchangeData parse(URL url) throws Exception;
+    Map<String, Currency> parseCurrencies(URL url) throws Exception;
 }

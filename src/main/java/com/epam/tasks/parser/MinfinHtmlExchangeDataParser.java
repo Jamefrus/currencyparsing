@@ -1,7 +1,6 @@
 package com.epam.tasks.parser;
 
 import com.epam.tasks.domain.Currency;
-import com.epam.tasks.domain.ExchangeData;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -17,15 +16,8 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class MinfinHtmlExchangeDataParser implements ExchangeParser {
-
-    @Override
-    public ExchangeData parse(URL url) throws Exception {
-        Map<String, Currency> currencies = parseCurrencies(url);
-        return new ExchangeData(currencies);
-    }
-
-    private Map<String, Currency> parseCurrencies(URL url) throws Exception {
+class MinfinHtmlExchangeDataParser implements ExchangeParser {
+    public Map<String, Currency> parseCurrencies(URL url) throws Exception {
         try (BufferedReader reader = reader(url)) {
             return reader.lines()
                     .filter(s -> s.contains("curWgtJSON"))

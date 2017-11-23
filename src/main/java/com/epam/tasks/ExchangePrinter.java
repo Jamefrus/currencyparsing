@@ -1,4 +1,4 @@
-package com.epam.tasks.run;
+package com.epam.tasks;
 
 import com.epam.tasks.parser.ExchangeParser;
 import lombok.Builder;
@@ -9,6 +9,6 @@ class ExchangePrinter {
 
     @Builder(builderMethodName = "with", buildMethodName = "print")
     static void print(String url, ExchangeParser parser) throws Exception {
-        parser.parse(new URL(url)).getCurrencies().values().forEach(System.out::println);
+        parser.parseCurrencies(new URL(url)).values().forEach(System.out::println);
     }
 }

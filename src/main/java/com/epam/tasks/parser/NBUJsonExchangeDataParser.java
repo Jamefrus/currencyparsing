@@ -1,12 +1,10 @@
 package com.epam.tasks.parser;
 
 import com.epam.tasks.domain.Currency;
-import com.epam.tasks.domain.ExchangeData;
 import com.google.common.collect.ImmutableMap;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.reflect.TypeToken;
-import lombok.Cleanup;
 import lombok.Value;
 
 import java.io.BufferedReader;
@@ -22,21 +20,16 @@ import java.util.stream.Collectors;
 
 import static com.epam.tasks.parser.NBUXmlExchangeDataParser.NBU_PROVIDER;
 
-public class NBUJsonExchangeDataParser implements ExchangeParser {
+class NBUJsonExchangeDataParser implements ExchangeParser {
 
     private static final Type TYPE = new TypeToken<Set<JsonCurrency>>() {
     }.getType();
 
-    @Override
-    public ExchangeData parse(URL url) throws Exception {
-        @Cleanup
-        Reader reader = reader(url);
-        Set<JsonCurrency> object = new Gson().fromJson(reader, TYPE);
-        return new ExchangeData(extractCurrencies(object));
-    }
-
-    private Reader reader(URL url) throws IOException {
-        return new BufferedReader(new InputStreamReader(url.openStream()));
+    public Map<String, Currency> parseCurrencies(URL url) throws IOException {
+        try (Reader reader = new BufferedReader(new InputStreamReader(url.openStream()))) {
+            Set<JsonCurrency> object = new Gson().fromJson(reader, TYPE);
+            return extractCurrencies(object);
+        }
     }
 
     private Map<String, Currency> extractCurrencies(Set<JsonCurrency> currencies) {
