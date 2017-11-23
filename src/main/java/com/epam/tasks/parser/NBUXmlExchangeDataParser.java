@@ -1,8 +1,7 @@
-package com.epam.tasks.xml;
+package com.epam.tasks.parser;
 
 import com.epam.tasks.domain.Currency;
 import com.epam.tasks.domain.ExchangeData;
-import com.epam.tasks.parser.ExchangeParser;
 import com.google.common.collect.ImmutableMap;
 
 import javax.xml.bind.JAXBContext;

@@ -1,12 +1,13 @@
-package com.epam.tasks.json;
+package com.epam.tasks.parser;
 
 import com.epam.tasks.domain.Currency;
 import com.epam.tasks.domain.ExchangeData;
 import com.epam.tasks.parser.ExchangeParser;
+import com.epam.tasks.parser.NBUJsonExchangeDataParser;
 import com.epam.tasks.util.Resources;
 import org.junit.Test;
 
-import static com.epam.tasks.xml.NBUXmlExchangeDataParser.NBU_PROVIDER;
+import static com.epam.tasks.parser.NBUXmlExchangeDataParser.NBU_PROVIDER;
 import static com.google.common.collect.ImmutableMap.of;
 import static org.assertj.core.api.Assertions.assertThat;
 

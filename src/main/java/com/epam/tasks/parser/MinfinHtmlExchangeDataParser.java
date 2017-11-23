@@ -1,8 +1,7 @@
-package com.epam.tasks.html;
+package com.epam.tasks.parser;
 
 import com.epam.tasks.domain.Currency;
 import com.epam.tasks.domain.ExchangeData;
-import com.epam.tasks.parser.ExchangeParser;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;

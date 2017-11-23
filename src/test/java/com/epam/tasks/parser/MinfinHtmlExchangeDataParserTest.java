@@ -1,8 +1,9 @@
-package com.epam.tasks.html;
+package com.epam.tasks.parser;
 
 import com.epam.tasks.domain.Currency;
 import com.epam.tasks.domain.ExchangeData;
 import com.epam.tasks.parser.ExchangeParser;
+import com.epam.tasks.parser.MinfinHtmlExchangeDataParser;
 import com.epam.tasks.util.Resources;
 import org.junit.Test;
 

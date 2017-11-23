@@ -1,7 +1,8 @@
-package com.epam.tasks.xml;
+package com.epam.tasks.parser;
 
 import com.epam.tasks.domain.ExchangeData;
 import com.epam.tasks.parser.ExchangeParser;
+import com.epam.tasks.parser.NBUXmlExchangeDataParser;
 import com.epam.tasks.util.Resources;
 import com.google.common.collect.ImmutableMap;
 import org.junit.Before;
