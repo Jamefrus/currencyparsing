@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exchange>
+    <currency>
+        <r030>12</r030>
+        <txt>Algerian Dinar</txt>
+        <rate>0.234004</rate>
+        <cc>DZD</cc>
+        <exchangedate>22.11.2017</exchangedate>
+    </currency>
+    <currency>
+        <r030>944</r030>
+        <txt>Азербайджанський манат</txt>
+        <rate>15.799329</rate>
+        <cc>AZN</cc>
+        <exchangedate>22.11.2017</exchangedate>
+    </currency>
+    <currency>
+        <r030>36</r030>
+        <txt>Австралійський долар</txt>
+        <rate>20.072141</rate>
+        <cc>AUD</cc>
+        <exchangedate>22.11.2017</exchangedate>
+    </currency>
+    <currency>
+        <r030>50</r030>
+        <txt>Така</txt>
+        <rate>0.324342</rate>
+        <cc>BDT</cc>
+        <exchangedate>22.11.2017</exchangedate>
+    </currency>
+    <currency>
+        <r030>51</r030>
+        <txt>Вiрменський драм</txt>
+        <rate>0.05562992</rate>
+        <cc>AMD</cc>
+        <exchangedate>22.11.2017</exchangedate>
+    </currency>
+    <currency>
+        <r030>975</r030>
+        <txt>Болгарський лев</txt>
+        <rate>15.87257</rate>
+        <cc>BGN</cc>
+        <exchangedate>22.11.2017</exchangedate>
+    </currency>
+    <currency>
+        <r030>124</r030>
+        <txt>Канадський долар</txt>
+        <rate>20.68744</rate>
+        <cc>CAD</cc>
+        <exchangedate>22.11.2017</exchangedate>
+    </currency>
+    <currency>
+        <r030>156</r030>
+        <txt>Юань Женьмiньбi</txt>
+        <rate>3.994027</rate>
+        <cc>CNY</cc>
+        <exchangedate>22.11.2017</exchangedate>
+    </currency>
+    <currency>
+        <r030>191</r030>
+        <txt>Куна</txt>
+        <rate>4.103579</rate>
+        <cc>HRK</cc>
+        <exchangedate>22.11.2017</exchangedate>
+    </currency>
+    <currency>
+        <r030>203</r030>
+        <txt>Чеська крона</txt>
+        <rate>1.215822</rate>
+        <cc>CZK</cc>
+        <exchangedate>22.11.2017</exchangedate>
+    </currency>
+</exchange>
